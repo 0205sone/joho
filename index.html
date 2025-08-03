@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報3 定着確認問題集（解答付き）</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        h1, h2 {
+            border-bottom: 2px solid #005ab3;
+            padding-bottom: 10px;
+            color: #005ab3;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        h2 {
+            margin-top: 40px;
+            font-size: 1.5em;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+        .answer-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+        .answer-btn:hover {
+            background-color: #0056b3;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #e9f5ff;
+            border-left: 5px solid #007bff;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function toggleAnswer(button) {
+            const answerDiv = button.nextElementSibling;
+            if (answerDiv.style.display === 'none' || answerDiv.style.display === '') {
+                answerDiv.style.display = 'block';
+                button.textContent = '答えを隠す';
+            } else {
+                answerDiv.style.display = 'none';
+                button.textContent = '答えを見る';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>情報3 定着確認問題集（解答付き）</h1>
+
+        <h2>第09回講義</h2>
+        <ol>
+            <li>アナログデータをデジタルデータに変換する処理を、アルファベット3文字の略称で何と呼ぶか。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">ADC</div>
+            </li>
+            <li>次の項目のうち、本質的にアナログデータとして扱われるべきものはどれか。適切なものをすべて選択せよ。
+                <ul>
+                    <li>① 部屋の明るさ</li>
+                    <li>② 所持金</li>
+                    <li>③ 体重</li>
+                    <li>④ 本日の登校に要した時間</li>
+                    <li>⑤ 欠課時数</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">① 部屋の明るさ, ③ 体重, ④ 本日の登校に要した時間</div>
+            </li>
+            <li>AD変換において「分解能を細かくすること (=分解能を高くすること)」によって得られる一般的なメリットはどれか。最も適切なものを選択せよ。
+                <ul>
+                    <li>① 変換後のデータ容量が小さくなる</li>
+                    <li>② 変換の処理速度が速くなる</li>
+                    <li>③ より高精度なデジタル表現が可能になる</li>
+                    <li>④ ノイズ成分が除去される</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">③ より高精度なデジタル表現が可能になる</div>
+            </li>
+            <li>成績順位(1位、2位、3位･･･)は数値で表現されるため、量的変数に分類される。この説明は「適切」か「不適切」か答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">不適切</div>
+            </li>
+            <li>次のデータは、名義尺度/順序尺度/間隔尺度/比例尺度のどれに分類するのが最も適切か答えよ。
+                <ul>
+                    <li>① 顧客満足度(非常に不満、不満、普通、満足、非常に満足)</li>
+                    <li>② 最終学歴(高校、高専・短大・専門学校、大学、大学院(修士)、大学院(博士))</li>
+                    <li>③ 国籍(日本、英国、米国、カナダ、フランス、ドイツ、イタリア・・・)</li>
+                    <li>④ 時刻</li>
+                    <li>⑤ 年収</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">
+                    ① 順序尺度<br>
+                    ② 順序尺度<br>
+                    ③ 名義尺度<br>
+                    ④ 間隔尺度<br>
+                    ⑤ 比例尺度
+                </div>
+            </li>
+            <li>次の尺度と、それに対応する別名 (統計用語) との正しい組み合わせはどれか。
+                <ul>
+                    <li>① 名義尺度→ オーディナルデータ</li>
+                    <li>② 順序尺度→ カテゴリカルデータ</li>
+                    <li>③ 名義尺度→ カテゴリカルデータ</li>
+                    <li>④ 比例尺度→ オーディナルデータ</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">③ 名義尺度→ カテゴリカルデータ</div>
+            </li>
+            <li>次の説明のうち不適切なものはどれか。最も不適切なものを記号でひとつ答えよ。
+                <ul>
+                    <li>① 質的データでは、加減算や平均値の計算は意味を持たない。</li>
+                    <li>② 間隔尺度のデータは、差に意味があり、比には意味がない。</li>
+                    <li>③ 比例尺度は、絶対的なゼロ点を持ち、値同士の比率を計算することができる。</li>
+                    <li>④ 順序尺度では、順位の差に意味があるため、平均順位や偏差値のような処理が可能である。</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">④ 順序尺度では、順位の差に意味があるため、平均順位や偏差値のような処理が可能である。</div>
+            </li>
+            <li>次のデータのうち、順序尺度に分類されるものをすべて選択せよ。
+                <ul>
+                    <li>① アンケートの回答 (非常に良い/良い/どちらとも言えない/悪い/非常に悪い)</li>
+                    <li>② 都道府県名</li>
+                    <li>③ 成績順位(1位~160位)</li>
+                    <li>④ 出席番号</li>
+                    <li>⑤ 試験勉強時間</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">① アンケートの回答, ③ 成績順位(1位~160位)</div>
+            </li>
+            <li>パーセンタイル (Percentile) に相当する語を漢字4文字で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">百分位数</div>
+            </li>
+            <li>「中位数」と同じ意味を持つ語をすべて答えよ。
+                <ul>
+                    <li>① 平均値</li>
+                    <li>② 最頻値</li>
+                    <li>③ 中央値</li>
+                    <li>④ 50 パーセンタイル</li>
+                    <li>⑤ 第2四分位数</li>
+                    <li>⑥ 期待値</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">③ 中央値, ④ 50 パーセンタイル, ⑤ 第2四分位数</div>
+            </li>
+            <li>心理学者ジョージ・A・ミラーは「人間の短期記憶の容量には限界があり、一度に保持できる情報の単位(チャンク) の数は約( )個である」と主張している。括弧にあてはまる数値を○○±○の形式で答えよ。○の数と正答の桁数は関係ない。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">7±2</div>
+            </li>
+            <li>「平均」を意味する2つの英単語を答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Mean, Average</div>
+            </li>
+            <li>n件のデータ $(x_{1},x_{2},\cdot\cdot\cdot,x_{n})$ について算術平均を求める式を答えよ。ただし、シグマ記号(総和記号)を使用して記述すること。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">$\frac{1}{n}\sum_{i=1}^{n}x_{i}$</div>
+            </li>
+            <li>次の各分析について、常に正しいと言えるものは「○」、常に正しいとは言えないものについては「×」を答えよ。
+                <ul>
+                    <li>分析①: 40名のクラスで試験を実施したところ、平均点が49点であった。いま、点数区分を「0から19点」「20から39点」 「40から59点」 「60から79点」 「80から100点」に区切るとすれば、「40から59点」に属する学生が最も多い。</li>
+                    <li>分析②: 40名のクラスで試験が実施され、自分の成績は65点、クラスの平均点は62点であった。よって、自分は(成績順位において) 上位半分に含まれるといえる。</li>
+                    <li>分析③: 情報3の中間試験の成績が65点 (クラス平均50点)であった。その後、情報3の前期末試験の成績が75点 (クラス平均40点)であった。これより、情報3の成績順位は、中間試験のときよりも、前期末試験のほうが向上しているはずだ。</li>
+                    <li>分析④: 中学1年生の学年末の9科目平均が79点であった。そして、2年生の学年末の9科目平均は86点であった。これより、少なくとも1年次よりも2年次のほうが学年順位があがっているはずだ。</li>
+                    <li>分析⑤: A君の9科目平均は65点であった。また、B君の9科目平均は70点であった。これより、B君は、A君よりも点数が高かった科目数が多いはずだ。</li>
+                    <li>分析⑥: 40名のクラスで試験を実施したところ、平均が62点であった。クラス全員の試験点数を合計すると2480点となるはずだ。</li>
+                    <li>分析⑦: 10人の高血圧患者に対して、血圧を下げる新薬Xを投与したところ、10名についての最高血圧を平均した値が181から182になった。これより、新薬Xには最高血圧を下げる効果は期待できないといえる。</li>
+                    <li>分析⑧: 高専3年生の成績はクラス2位であった。また、高専4年生の成績はクラス3位であった。よって、3年と4年の両方の成績を総合した順位では1位になる可能性はない。(3年と4年でクラスのメンバーは同じものとする)</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">
+                    ①: ×, ②: ×, ③: ×, ④: ×, ⑤: ×, ⑥: ○, ⑦: ×, ⑧: ×
+                </div>
+            </li>
+            <li>n件のデータ $(x_{1},x_{2},\cdot\cdot\cdot,x_{n})$ について調和平均を求める式を答えよ。ただし、シグマ記号(総和記号)を使用して記述すること。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">$\frac{n}{\sum_{i=1}^{n}\frac{1}{x_{i}}}$</div>
+            </li>
+            <li>A君は平日に新聞配達のバイトをしている。担当の配達先は100件となっている。今週の月曜は50部/時間、火曜は55部/時間、水曜は60部/時間、木曜は30部/時間(大雨だった)、金曜は45部/時間で配達ができた。5日間での平均配達速度(部/時間)を求めるための式を答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">$\frac{5}{\frac{1}{50}+\frac{1}{55}+\frac{1}{60}+\frac{1}{30}+\frac{1}{45}}$</div>
+            </li>
+            <li>公大製作所の人事部長は、会社説明会で就活生に向けて次のような話をした。2020年から2022年にかけての公大製作所の「平均売上成長率」を幾何平均によって求めよ。
+                <blockquote style="border-left: 3px solid #ccc; padding-left: 10px; color: #555;">
+                我が公大製作所は、新型コロナウイルスの影響で2020年度には売上が前年比40%になるという非常に大きな危機に直面しました。しかし、社員一同の懸命な努力の結果、2021年度の売上は前年比110%、そして2022年度には前年比200%という飛躍的な回復と成長を遂げました。厳しい時期ではありましたが、平均してみれば (40+110+200) / 3≒116、つまり、年間平均16%ずつの売上成長が見られました。この結果は、まさに「困難を乗り越えて強くなる」という言葉通りです。
+                </blockquote>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">平均売上成長率は-4.2%</div>
+            </li>
+            <li>先に示した40人クラスの「国語」の得点分布を示した箱ひげ図について、次の各問いに答えよ。
+                <ul>
+                    <li>(1) 席次1位、10位、20位、30位、40位の得点は、およそ何点か答えよ。</li>
+                    <li>(2) この試験において「平均点以上の得点であれば上位20位以内に入っている」という解釈は「適切」か「不適切」か答えよ。</li>
+                    <li>(3) この試験において「約63~76の得点範囲に約10名の学生が存在している」という解釈は「適切」か「不適切」か答えよ。</li>
+                    <li>(4) この試験において「平均値&lt;第2四分位数である」は「正しい」か「正しくない」 か答えよ。</li>
+                    <li>(5) この試験において「点数が72点の学生は、上位11位から20位の範囲に位置する」は「正しい」か「正しくない」か答えよ。</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">
+                    (1) 1位:約87点, 10位:約76点, 20位:約67点, 30位:約63点, 40位:46点<br>
+                    (2) 適切<br>
+                    (3) 不適切<br>
+                    (4) 正しくない (図より平均値(◇)は約68点、第2四分位数(中央線)は約67点であり、平均値 > 第2四分位数であるため)<br>
+                    (5) 正しい
+                </div>
+            </li>
+            <li>箱ひげ図では ( ① ) を 「ひげ」の下限、( ② ) を 「ひげ」の上限として、それに収まらない値を「外れ値」として別途プロットする。括弧にあてはまる式を答えよ。なお、第1四分位をQ1、第2四分位をQ2、第3四分位をQ3として、Q1~Q3を使った式で答えること。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">① $Q1 - 1.5 \times (Q3 - Q1)$<br>② $Q3 + 1.5 \times (Q3 - Q1)$</div>
+            </li>
+            <li>箱ひげ図では ( ① ) から ( ② ) の範囲を四分位範囲といい、その範囲にはデータの(③ )%が含まれることになる。括弧にあてはまる語や数値を答えよ。なお、第1四分位をQ1、第2四分位をQ2、第3四分位をQ3として、①と②はQ1、Q2、Q3のいずれかを答えること。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">① Q1, ② Q3, ③ 50</div>
+            </li>
+            <li>図で示された40人クラスにおける社会の試験 (100点満点)の得点分布を表す箱ひげ図について、以下の各問いに答えよ。
+                <ul>
+                    <li>(1) 最高得点および最低得点は何点か答えよ。</li>
+                    <li>(2) 平均点は何点か答えよ (小数点以下第1位まで答えること)。</li>
+                    <li>(3) 中央値は約何点か答えよ (小数点以下第1位まで答えること)。</li>
+                    <li>(4) クラスの上位10番以内に位置するためには、およそ何点以上をとっている必要があるか。</li>
+                    <li>(5) クラスの上位21番から30番は、およそ何点から何点の点数範囲に属しているか。</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">
+                    (1) 最高得点: 90点, 最低得点: 67点<br>
+                    (2) 約80.5点<br>
+                    (3) 約81.0点<br>
+                    (4) 約83点以上<br>
+                    (5) 約79点から81点
+                </div>
+            </li>
+            <li>一般に、大きな値の外れ値が存在すると、平均値が中央値よりも ( ) なる傾向がある。括弧にあてはまる適切な語を「大きく」または「小さく」で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">大きく</div>
+            </li>
+        </ol>
+
+        <h2>第10回講義</h2>
+        <ol>
+            <li>Excel において、(1)転置行列、(2) 行列の積、(3)逆行列、(4)行列式を求めるために利用すべき関数はどれか。最も適切なものを答えよ。
+                <ul>
+                    <li>① TRANSPOSE 関数</li>
+                    <li>② MINVERSE 関数</li>
+                    <li>③ MDETERM 関数</li>
+                    <li>④ MMULT 関数</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">(1) ① TRANSPOSE 関数, (2) ④ MMULT 関数, (3) ② MINVERSE 関数, (4) ③ MDETERM 関数</div>
+            </li>
+            <li>「マクロ (VBA) はWordとExcelの固有機能であり、PowerPoint では利用できない」は「正しい」か「正しくない」か答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">正しくない</div>
+            </li>
+            <li>「Excel ファイルに記述したマクロ (VBA)は、そのファイルに含まれるシートやセルに対してのみ操作や処理が可能となっている(別の Excel ファイルのシートやセルに対する操作や処理はできない)」は「正しい」か「正しくない」か答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">正しくない</div>
+            </li>
+            <li>Microsoft Excel における 「Excel マクロ有効ブック」の拡張子を答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">.xlsm</div>
+            </li>
+            <li>VBAにおいて ( ) から開始される行はコメントとして扱われる。括弧にあてはまる語を答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">シングルクォーテーション (アポストロフィ)</div>
+            </li>
+            <li>Excel において VBA エディタを起動するためのショートカットキーを答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Alt + F11</div>
+            </li>
+            <li>ExcelのVBA エディタがアクティブなとき、選択しているサブルーチンを実行するためのショートカットキーを答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">F5</div>
+            </li>
+            <li>ExcelのVBA エディタにおいて <code>Debug.Print "AAAAA"</code> のようなコードを実行したときに文字列「AAAAA」が出力されるウィンドウの名称を答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">イミディエイトウィンドウ</div>
+            </li>
+            <li>「ExcelのVBAにおいて、無限ループが生じたときは ( ① ) の押下のキー操作によって中断することができる。」括弧にあてはまる語を答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Esc</div>
+            </li>
+        </ol>
+
+        <h2>第11回講義</h2>
+        <ol>
+            <li>WWWとは何の略語か答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">World Wide Web</div>
+            </li>
+            <li>HTTP とは何の略語か答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">HyperText Transfer Protocol</div>
+            </li>
+            <li>HTTPSの「S」とは略語か答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Secure</div>
+            </li>
+            <li>通信の文脈において「プロトコル」とは何を意味するか。最も適切なものを答えよ。
+                <ul>
+                    <li>① 通信機器のハードウェア仕様を定義するもの</li>
+                    <li>② 通信のためのデータ圧縮方式</li>
+                    <li>③ データの送受信におけるルールや手順を定義するもの</li>
+                    <li>④ ネットワークトポロジを決定するためのルーティングアルゴリズムの総称</li>
+                    <li>⑤ インターネット上でドメイン名をIPアドレスに変換するシステムの総称</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">③ データの送受信におけるルールや手順を定義するもの</div>
+            </li>
+            <li>ウェブ (WWW) に関する文脈において「クライアント」とは何を指すか。具体的なソフトウェア名称を2つ答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Google Chrome, Edge (その他、Safari, Firefoxなど)</div>
+            </li>
+            <li>ウェブサーバの機能を提供する具体的なソフトウェア名称を1つ答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Apache (その他、Nginx, Microsoft Internet Information Services (IIS)など)</div>
+            </li>
+            <li>「ウェブサーバの基本機能は、クライアントからのHTTP/HTTPSに基づく ( ① ) に応じて、HTMLや画像などのデータを ( ② ) することである」。各括弧にあてはまる最も適切な語をカタカナ5文字で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">① リクエスト, ② レスポンス</div>
+            </li>
+            <li>HTMLとは何の略語か。英語で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">HyperText Markup Language</div>
+            </li>
+            <li>HTMLは「テキストファイル」と「バイナリファイル」のどちらか答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">テキストファイル</div>
+            </li>
+            <li>ウェブページを記述するために用いられる HTMLや、文書の構造や見栄えを指定するためのXMLなどが属する「文章に対して意味付けや見た目の情報を付加するための言語」の総称は何か。最も適切なものを記号で答えよ。
+                <ul>
+                    <li>① スクリプト言語</li>
+                    <li>② マークアップ言語</li>
+                    <li>③ アセンブリ言語</li>
+                    <li>④ 機械語</li>
+                    <li>⑤ メイクアップ言語</li>
+                    <li>⑥ プログラミング言語</li>
+                    <li>⑦ マークダウン言語</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">② マークアップ言語</div>
+            </li>
+            <li>「HTMLには、特定のキーワードを角括弧(くと > ) で囲んで表現した ( ① ) と呼ばれるマークアップが用いられる」。括弧にあてはまる最も適切な語をカタカナ2文字で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">タグ</div>
+            </li>
+            <li>HTML において <code>&lt;h2&gt;</code> タグに対応する終了タグを答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer"><code>&lt;/h2&gt;</code></div>
+            </li>
+            <li>日本語を含む HTMLの記述に適した文字コードを答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">UTF-8</div>
+            </li>
+            <li>Windows 環境において標準的に使われる改行コードはどれか。
+                <ul>
+                    <li>① CR</li>
+                    <li>② LF</li>
+                    <li>③ CR+LF</li>
+                    <li>④ &lt;br&gt;</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">③ CR+LF</div>
+            </li>
+            <li>HTML において <code>&lt;p&gt;</code> タグが表すものは何か。最も適切なものを記号で答えよ。
+                <ul>
+                    <li>① 見出し (Header)</li>
+                    <li>② 段落 (Paragraph)</li>
+                    <li>③ 本文 (Body)</li>
+                    <li>④ 区分(Division)</li>
+                    <li>⑤ ハイパーリンク (Anchor)</li>
+                    <li>⑥ 画像 (Image)</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">② 段落 (Paragraph)</div>
+            </li>
+            <li>HTML において改行を与えるタグを答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer"><code>&lt;br&gt;</code> (または <code>&lt;br /&gt;</code>)</div>
+            </li>
+            <li>HTML において最上位レベルのヘッダを表すためのタグを答えよ(開始タグと終了タグを記述せよ)。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer"><code>&lt;h1&gt;</code> と <code>&lt;/h1&gt;</code></div>
+            </li>
+            <li>HTML において強調 (内容の重要性)を表すためのタグを答えよ (開始タグと終了タグを記述せよ)。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer"><code>&lt;strong&gt;</code> と <code>&lt;/strong&gt;</code></div>
+            </li>
+            <li>HTML における img タグの「alt 属性」とは何か。最も適切な説明を記号で答えよ。
+                <ul>
+                    <li>① 画像の表示サイズを指定する属性</li>
+                    <li>② 画像が表示できない場合に代わりに表示されるテキストを設定する属性</li>
+                    <li>③ 画像を自動的に中央に配置するための属性</li>
+                    <li>④ 画像のファイル形式を指定する属性</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">② 画像が表示できない場合に代わりに表示されるテキストを設定する属性</div>
+            </li>
+            <li>「ウェブ開発において、異なるデバイスや画面サイズに対応するために動的に画面レイアウトを調整する設計を( ) デザインという」。括弧にあてはまる語をカタカナ6文字で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">レスポンシブ</div>
+            </li>
+            <li>「ニンジン」を「%E3%83%8B%E3%83%B3%E3%82%B8%E3%83%B3」のような文字列に変換することを何というか。最も適切なものを記号で答えよ。
+                <ul>
+                    <li>① URL エンコード</li>
+                    <li>② URL デコード</li>
+                    <li>③ URL暗号化</li>
+                    <li>④ URL復号化</li>
+                    <li>⑤ URL ハッシュ化</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">① URL エンコード</div>
+            </li>
+        </ol>
+
+        <h2>第12回講義</h2>
+        <ol>
+            <li>ウェブページに美しく整形された数式を表示するための技術は、どれか。最も適切なものを記号で答えよ。
+                <ul>
+                    <li>① Wolfalpha</li>
+                    <li>② Mathematica</li>
+                    <li>③ MathJax</li>
+                    <li>④ LaTeX</li>
+                    <li>⑤ jQuery</li>
+                    <li>⑥ React</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">③ MathJax</div>
+            </li>
+            <li>HTMLに関する文脈でCDNとは何の略か。最も適切なものを記号で答えよ。
+                <ul>
+                    <li>① Content Distribution Network</li>
+                    <li>② Central Data Network</li>
+                    <li>③ Cool Developer's Network</li>
+                    <li>④ Content Delivery Network</li>
+                    <li>⑤ Chocolate Donut Network</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">④ Content Delivery Network</div>
+            </li>
+        </ol>
+        
+        <h2>第13回講義</h2>
+        <p>この講義には「定着確認」はありませんでした。</p>
+
+        <h2>第14回講義</h2>
+        <ol>
+            <li>ITパスポート試験の位置づけとして最も適切なものを答えよ。
+                <ul>
+                    <li>① あらゆる職種において IT を業務に応用するために必要とされる初歩的なプログラミング技能を評価する国家資格であり、情報処理技術者としての登竜門とされている。</li>
+                    <li>② ITエンジニアを目指す者に求められる基本的なIT技術やセキュリティ知識を証明するための国家試験であり、技術系人材の基礎力の可視化を目的としている。</li>
+                    <li>③ IT を利活用するすべての社会人やこれから社会人となる学生が身につけておくべき、ITに関する基礎的な知識を証明するための国家試験である。</li>
+                    <li>④ 情報システムの開発や運用を行う実務者が、プロジェクトマネジメントやシステム監査に関する応用的な知識を有していることを証明する試験である。</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">③ IT を利活用するすべての社会人やこれから社会人となる学生が身につけておくべき、ITに関する基礎的な知識を証明するための国家試験である。</div>
+            </li>
+            <li>ChatGPTの基礎となった自然言語処理モデル「GPT (Generative Pre-trained Transformer)」を提唱した論文「Improving Language Understanding by Generative Pre-Training」が、OpenAIによって発表されたのは西暦何年か。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">2018年</div>
+            </li>
+            <li>ChatGPTで利用可能な「ウェブブラウジング機能 (Browse)」 とはどのような機能か。最も適切なものを答えよ。
+                <ul>
+                    <li>① ChatGPT がユーザのウェブブラウザ履歴を分析し、個別最適化された回答を提供する機能</li>
+                    <li>② ChatGPT が OpenAI の事前に学習済みのコーパスに基づいて、インターネットの情報を模倣して回答する機能</li>
+                    <li>③ ChatGPT がインターネットにリアルタイムでアクセスし、検索結果やウェブページの内容を取得・参照して回答に反映させる機能</li>
+                    <li>④ ChatGPT がウェブブラウザ (アプリ) のUIを自動操作して情報収集を行なう機能</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">③ ChatGPT がインターネットにリアルタイムでアクセスし、検索結果やウェブページの内容を取得・参照して回答に反映させる機能</div>
+            </li>
+            <li>生成AIの文脈において「マルチモーダル」とは、どのような意味か。最も適切なものを記号で答えよ。
+                <ul>
+                    <li>① 複数の学習モデルを統合し、異なるパラメータ空間を同時に最適化する技術的アプローチのこと。</li>
+                    <li>② 言語、画像、音声など異なる形式のデータを統一的に処理・生成できるAIモデルの性質のこと。</li>
+                    <li>③ 異なるモデル出力(例:画像分類結果と文章生成結果)を後処理で統合するパイプライン全体を指す用語のこと。</li>
+                    <li>④ 同一モダリティ内 (例: テキスト)で複数の生成方式(例:要約、翻訳、対話)を切り替え可能な構造をもつモデルのこと。</li>
+                    <li>⑤ 自然言語のようなモダリティを中心に据え、他のモダリティとの連携を人手で補助しながら行うインタラクション設計のこと。</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">②言語、画像、音声など異なる形式のデータを統一的に処理・生成できるAIモデルの性質のこと。</div>
+            </li>
+            <li>コンピュータサイエンスの文脈において「インタラクティブ」とは、どのような意味か。最も適切なものを記号で答えよ。
+                 <ul>
+                    <li>① プログラムの実行がコンパイルと完全に分離されておらず、入力に応じて逐次的にコードが最適化されていく設計思想のこと。</li>
+                    <li>② アルゴリズムや処理系がユーザ入力や外部イベントを逐次的に受け取り、それに即応して動作や出力を変化させる性質のこと。</li>
+                    <li>③ 複数のスレッドが同時にユーザからの入力を処理できるよう設計された、非同期・並行実行の仕組みのこと。</li>
+                    <li>④ 一方通行のバッチ処理に対して、初期状態に対する一括出力ではなく、事前に定義されたシナリオに沿って出力を提示する処理のこと。</li>
+                    <li>⑤ データベースやAPIなどの外部リソースと継続的に通信しながら、バックグラウンドで状態を自動更新するウェブアプリケーションの性質のこと。</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">② アルゴリズムや処理系がユーザ入力や外部イベントを逐次的に受け取り、それに即応して動作や出力を変化させる性質のこと。</div>
+            </li>
+            <li>米国の未来学者レイ・カーツワイル氏らが、2045年に到来することを予測した「技術的特異点」を指す用語をカタカナもしくは英語で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">シンギュラリティ (Singularity)</div>
+            </li>
+            <li>データを生成する AI (Generator)と、それが本物かどうかを判定する AI (Discriminator)が競い合いながら学習し、本物そっくりの画像や音声を自動生成する仕組みを何というか。アルファベット3文字で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">GAN</div>
+            </li>
+            <li>生成AIの文脈において、生成敵対ネットワーク 「GAN」 とは何の略語か。英語で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Generative Adversarial Network</div>
+            </li>
+            <li>一部分しか映っていない画像に対して、周囲の風景や背景などをAIが自動的に補完し、まるで元から全体があったかのように拡張する技術を何というか。英語で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Image Expansion</div>
+            </li>
+            <li>Google が開発・提供する最新の動画生成 AI モデルの名称を答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Veo</div>
+            </li>
+            <li>OpenAI が開発・提供する最新の動画生成 AI モデルの名称を答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Sora</div>
+            </li>
+            <li>機械学習技術を用いて、人物の顔や声などを合成し、実在する人物があたかも存在しない映像や音声を発しているかのように見せる技術の名称を英語で答えよ。
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">Deep Fake (ディープフェイク)</div>
+            </li>
+            <li>ChatGPT Gemini、Claudeなどに代表される生成AIにおいて、複数の情報源を横断的に検索・集約し、調査結果を高度に構造化して提示する高度な情報収集・分析機能の通称として最も適切なものはどれか。
+                <ul>
+                    <li>① Smart Search</li>
+                    <li>② Deep Research</li>
+                    <li>③ Fast Crawl</li>
+                    <li>④ Insight Finder</li>
+                </ul>
+                <button class="answer-btn" onclick="toggleAnswer(this)">答えを見る</button>
+                <div class="answer">② Deep Research</div>
+            </li>
+        </ol>
+
+    </div>
+
+</body>
+</html>
